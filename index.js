@@ -27,9 +27,9 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   Study the code for counter1 and counter2, then answer the questions below.
   
-  1. What is the difference between counter1 and counter2?
+  1. What is the difference between counter1 and counter2? It doesnt have a counterMaker
   
-  2. Which of the two uses a closure? How can you tell?
+  2. Which of the two uses a closure? How can you tell? Counter1 uses a closure which is the const.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
@@ -61,11 +61,14 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(baseball){
+let score = 0;
+return function win(){
+  score ++;
+  return `Your ${baseball} game score is ${baseball}`;
+   }
 }
+
 
 /* Task 3: finalScore()
 Use the finalScore function below to do the following:
@@ -80,11 +83,12 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(baseball){
+const baseball = game('baseball')
 }
+
+console.log(baseballGame());
+
 
 /* Task 4: 
 // create a function called getInningScore 
